@@ -15,3 +15,6 @@ The ajax select picks up data from Github's api – it searches the repos as you
 This plugin used CMB2 which is **not** included here, I'm assuming you have it which is why you want to know how Select2 works with it. However Select2 **is** included.
 
 The ajax select as I've done it requires a custom field type which is in [field-types/class-mjj-select-field.php](https://github.com/tharsheblows/mjj-select2-cmb2/field-types/class-mjj-select-field.php)
+
+###Other things###
+I haven't made it necessary to build this plugin. I think it would add an unnecessary layer of complexity to something that's meant to be a clear example of how it all works. Everything should be there to run it and if you edit the js files, the edits will show up, no need to do anything else.
