@@ -11,6 +11,9 @@ You can see the js for the regular select in [assets/js/regular-select.js](https
 #### Ajax select ###
 The ajax select picks up data from Github's api – it searches the repos as you're typing (not immediately as you're typing but it's pretty quick). The js for this is in [assets/js/ajax-select.js](https://github.com/tharsheblows/mjj-select2-cmb2/assets/js/ajax-select.js) – it's an extension of [Select2's own example here](https://select2.org/data-sources/ajax).
 
+#### Notes ####
+I'm using this approach in a more complicated project with more js all round and the select2( 'destroy' ) method is not fully destroying the instance when adding a row – it's leaving 'data-selected2-id' attributes in the select and option elements. I haven't figured out why this is happening. To workaround it, I'm manually (via jQuery) removing those attributes after I destroy the instance. This works for me, so if you're getting weird stuff happening, take a look at the selects and options and make sure they don't have any stray attributes. If you know more about this, tell me! :) [Here is the destroy method in Select2](https://github.com/select2/select2/blob/062c6c3af5f0f39794c34c0a343a3857e587cc97/src/js/select2/core.js#L552) 
+
 ### Metaboxes ###
 This plugin used CMB2 which is **not** included here, I'm assuming you have it which is why you want to know how Select2 works with it. However Select2 **is** included.
 
